@@ -111,7 +111,7 @@ class EmailLoginForm extends StatelessWidget {
                 print("Forgot password pressed");
               },
               child: Text(
-                MyStrings.pleaseEnterValidPassword,
+                MyStrings.forgetPassword,
                 style: TextStyle(color: Colors.grey[600], fontSize: 14),
               ),
             ),
