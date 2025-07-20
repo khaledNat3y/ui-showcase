@@ -7,7 +7,13 @@ class ToggleButton extends StatelessWidget {
   final String text;
   final bool isSelected;
   final VoidCallback onTap;
-  const ToggleButton({super.key, required this.text, required this.isSelected, required this.onTap});
+
+  const ToggleButton({
+    super.key,
+    required this.text,
+    required this.isSelected,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +25,9 @@ class ToggleButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: isSelected ? AppColors.primaryColor : Colors.transparent,
           borderRadius: BorderRadius.circular(30),
+          boxShadow: isSelected
+              ? const [BoxShadow(color: AppColors.primaryColor, blurRadius: 4)]
+              : null,
         ),
         child: Text(
           text,

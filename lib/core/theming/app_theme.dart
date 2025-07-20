@@ -4,6 +4,16 @@ import 'app_colors.dart';
 import 'font_weight_helper.dart';
 
 abstract class AppTheme {
+  static TextStyle textStyle({
+    double? fontSize,
+    Color? color
+})=> TextStyle(
+    fontSize: fontSize ??32,
+    fontWeight: FontWeight.bold,
+    fontFamily: primaryFont,
+    color: color ??AppColors.primaryColor,
+
+  );
   static TextStyle font32BlackSemiBold = const TextStyle(
     fontSize: 32,
     fontWeight: FontWeightHelper.semiBold,
@@ -18,8 +28,8 @@ abstract class AppTheme {
     color: AppColors.textColor,
   );
   static TextStyle font12WhiteExtraBold = const TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeightHelper.extraBold,
+    fontSize: 14,
+    fontWeight: FontWeightHelper.bold,
     fontFamily: primaryFont,
     color: AppColors.textColor,
   );
