@@ -9,6 +9,31 @@ abstract class AppTheme {
     fontWeight: FontWeightHelper.semiBold,
     fontFamily: primaryFont,
     color: AppColors.primaryColor,
+  );
 
+  static TextStyle font12TextColorBold = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: primaryFont,
+    color: AppColors.textColor,
+  );
+  static TextStyle font12WhiteExtraBold = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeightHelper.extraBold,
+    fontFamily: primaryFont,
+    color: AppColors.textColor,
+  );
+  static TextStyle font16TextColorBold = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: primaryFont,
+    color: AppColors.textColor,
+  );
+
+  static TextStyle font16GreyBold = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: primaryFont,
+    color: AppColors.grey,
   );
 }
