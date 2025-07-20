@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:ui_showcase/core/theming/app_theme_data.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      title: 'المصري',
+      theme: AppThemeData.lightTheme(context),
+      home: Scaffold(
+        body: Column(
+          children: [
+
+          ],
+        ),
       ),
-      home: Container(),
     );
   }
 }
