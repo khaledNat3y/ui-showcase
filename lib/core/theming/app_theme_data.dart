@@ -9,7 +9,6 @@ abstract class AppThemeData {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-
       textTheme: GoogleFonts.almaraiTextTheme(Theme.of(context).textTheme),
       pageTransitionsTheme: PageTransitionsTheme(
         builders: <TargetPlatform, PageTransitionsBuilder>{

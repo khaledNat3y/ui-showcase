@@ -5,7 +5,8 @@ import '../../../../core/theming/app_colors.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final GlobalKey<FormState> formKey;
-  const CustomButton({super.key, required this.text, required this.formKey});
+  final VoidCallback? onPressed;
+  const CustomButton({super.key, required this.text, required this.formKey, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,7 @@ class CustomButton extends StatelessWidget {
         width: 245,
         height: 50,
         child: ElevatedButton(
-          onPressed: () {
-            if (formKey.currentState!.validate()) {
-              formKey.currentState!.save();
-            }
-          },
+          onPressed: onPressed,
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primaryColor,
             shape: RoundedRectangleBorder(

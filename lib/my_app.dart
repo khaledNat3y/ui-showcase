@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:ui_showcase/core/routing/app_router.dart';
 import 'package:ui_showcase/core/theming/app_theme_data.dart';
 
-import 'features/auth/view/login_screen.dart';
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool rememberMe;
+
+  const MyApp({super.key, required this.rememberMe});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'المصري',
+    return MaterialApp.router(
+      routerConfig: AppRouter.getRouter(rememberMe),
       theme: AppThemeData.lightTheme(context),
-      locale: const Locale("ar"),
-      home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

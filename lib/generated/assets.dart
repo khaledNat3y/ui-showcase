@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String fontsAlmaraiBold = 'assets/fonts/Almarai-Bold.ttf';
+  static const String fontsAlmaraiExtraBold = 'assets/fonts/Almarai-ExtraBold.ttf';
+  static const String fontsAlmaraiLight = 'assets/fonts/Almarai-Light.ttf';
+  static const String fontsAlmaraiRegular = 'assets/fonts/Almarai-Regular.ttf';
   static const String imagesCircle = 'assets/images/circle.png';
   static const String svgsAppLogo = 'assets/svgs/app_logo.svg';
 

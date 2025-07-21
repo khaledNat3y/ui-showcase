@@ -6,11 +6,13 @@ import 'font_weight_helper.dart';
 abstract class AppTheme {
   static TextStyle textStyle({
     double? fontSize,
-    Color? color
+    Color? color,
+    FontWeight? fontWeight,
+    String? fontFamily
 })=> TextStyle(
     fontSize: fontSize ??32,
-    fontWeight: FontWeight.bold,
-    fontFamily: primaryFont,
+    fontWeight: fontWeight ??FontWeight.bold,
+    fontFamily: fontFamily ?? primaryFont,
     color: color ??AppColors.primaryColor,
 
   );
